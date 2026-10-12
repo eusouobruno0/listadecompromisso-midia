@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --trigo: #b8862e;
+    --trigo-claro: #f0c46a;
+    --trigo-suave: #faeac6;
+    --oliva: #62723a;
+    --oliva-claro: #8a9a5b;
+    --oliva-suave: #e5ecd2;
+    --terra: #4a3a2c;
+    --terra-suave: #f2e9e1;
+    --linho: #f6f1e8;
+    --linho-escuro: #ece2d2;
+    --card: #fbf8f2;
+    --noite: #1c1a17;
+    --noite-suave: #2d2822;
+  }
+
+  body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    background-color: var(--linho);
+    color: var(--noite);
+    background-image: radial-gradient(#d9cbb5 0.75px, transparent 0.75px);
+    background-size: 24px 24px;
+    min-height: 100vh;
+  }
+}
+
+.font-impact {
+  font-family: 'Anton', Impact, sans-serif;
+}
+
+.font-serif-church {
+  font-family: 'Poppins', serif;
+}
+
+/* Papel/Post-it suave */
+.sticky-note {
+  box-shadow: 0 4px 14px -2px rgba(74, 58, 44, 0.08), 0 2px 6px -1px rgba(74, 58, 44, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sticky-note:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -4px rgba(74, 58, 44, 0.12), 0 4px 8px -2px rgba(74, 58, 44, 0.06);
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-sway {
+  animation: sway 5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* Animações da Ovelhinha da Ágape */
+@keyframes sheep-bob {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-3px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(1px) rotate(-1.5deg);
+  }
+  75% {
+    transform: translateY(-2px) rotate(0.5deg);
+  }
+}
+
+@keyframes sheep-head {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateY(2px) rotate(3deg);
+  }
+  40% {
+    transform: translateY(-1px) rotate(-2deg);
+  }
+  60% {
+    transform: translateY(3px) rotate(4deg);
+  }
+  80% {
+    transform: translateY(0.5px) rotate(-1deg);
+  }
+}
+
+@keyframes sheep-ear {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-12deg);
+  }
+  35% {
+    transform: rotate(8deg);
+  }
+  40% {
+    transform: rotate(-6deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes sheep-tail {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(14deg);
+  }
+  55% {
+    transform: rotate(-10deg);
+  }
+}
+
+.animate-sheep {
+  animation: sheep-bob 3.6s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.animate-sheep-head {
+  animation: sheep-head 3.6s ease-in-out infinite;
+  transform-origin: 90px 45px;
+}
+
+.animate-sheep-ear {
+  animation: sheep-ear 2.8s ease-in-out infinite;
+  transform-origin: 92px 34px;
+}
+
+.animate-sheep-tail {
+  animation: sheep-tail 2.2s ease-in-out infinite;
+  transform-origin: 32px 54px;
+}

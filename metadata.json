@@ -1,0 +1,6 @@
+{
+  "name": "Ágape · Nossos Compromissos",
+  "description": "Plataforma oficial da Igreja Ágape para confirmação de compromissos da equipe de mídia e membros. Lugar de amar & cuidar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
